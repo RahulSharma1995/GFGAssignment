@@ -2,16 +2,22 @@
 //  GFGAssignmentApp.swift
 //  GFGAssignment
 //
-//  Created by Headspire Technologies on 30/04/22.
+//  Created by Rahul Sharma on 30/04/22.
 //
 
 import SwiftUI
 
 @main
 struct GFGAssignmentApp: App {
+    
+    @StateObject var newsListViewModel: NewsListViewModel = NewsListViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                NewsListView()
+            }
+            .environmentObject(newsListViewModel)
         }
     }
 }

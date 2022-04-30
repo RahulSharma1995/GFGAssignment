@@ -2,7 +2,7 @@
 //  GFGAssignmentTests.swift
 //  GFGAssignmentTests
 //
-//  Created by Headspire Technologies on 30/04/22.
+//  Created by Rahul Sharma on 30/04/22.
 //
 
 import XCTest
