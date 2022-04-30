@@ -39,10 +39,14 @@ struct NewsCell: View {
                         .background(.orange)
                 case .failure:
                     Image(systemName: "questionmark")
-                        .font(.headline)
+                        .font(.title2)
+                        .frame(alignment:.center)
+                        .foregroundColor(.red)
                 default:
                     Image(systemName: "questionmark")
-                        .font(.headline)
+                        .font(.title2)
+                        .frame(alignment:.center)
+                        .foregroundColor(.red)
                 }
             }
         }

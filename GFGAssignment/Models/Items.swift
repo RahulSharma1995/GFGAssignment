@@ -54,7 +54,7 @@ struct Items : Decodable {
         let datetime = formatter.date(from: pubDate) ?? Date()
         formatter.dateFormat = "dd-MM-yyyy"
         let dateStr = formatter.string(from: datetime)
-        formatter.dateFormat = "HH:mm"
+        formatter.dateFormat = "HH:mm a"
         let timeStr = formatter.string(from: datetime)
         return (dateStr,timeStr)
     }

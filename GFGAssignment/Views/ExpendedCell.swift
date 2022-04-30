@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ExpendedCell: View {
     
-//    let url = URL(string: "https://picsum.photos/400/500")
     let item: ItemModel
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -25,10 +24,14 @@ struct ExpendedCell: View {
                         .frame(height: 300, alignment: .top)
                 case .failure:
                     Image(systemName: "questionmark")
-                        .font(.headline)
+                        .font(.title2)
+                        .frame(alignment:.center)
+                        .foregroundColor(.red)
                 default:
                     Image(systemName: "questionmark")
-                        .font(.headline)
+                        .font(.title2)
+                        .frame(alignment:.center)
+                        .foregroundColor(.red)
                 }
             }
             

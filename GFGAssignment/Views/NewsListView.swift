@@ -12,8 +12,10 @@ struct NewsListView: View {
     @EnvironmentObject var newsListViewModel: NewsListViewModel    
     var body: some View {
         List {
-//            ExpendedCell(item: newsListViewModel.items.first)
-//                .listRowInsets(EdgeInsets())
+            if let item = newsListViewModel.items.first {
+                ExpendedCell(item: item)
+                    .listRowInsets(EdgeInsets())
+            }
             ForEach(newsListViewModel.items) { item in
                 Section {
                     NewsCell(item: item)
@@ -28,7 +30,7 @@ struct NewsListView: View {
         .refreshable {
             newsListViewModel.getNewsData()
         }
-        .navigationTitle("Demo")
+        .navigationTitle("GeeksForGeeks")
         .toolbar {
             EditButton()
         }
